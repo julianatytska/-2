@@ -1,0 +1,13 @@
+j=input('Enter text :')
+spisok = j.split()
+c = input('Choose a or b:')
+if c=='a':
+  for i in spisok:
+    if len(i) < 3:
+      spisok.pop(spisok.index(i))
+  print(spisok)
+if c == 'b':
+    print(len(j))
+if c != 'b':
+    if c != 'a':
+        print("You can choose only a or b")
