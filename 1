@@ -1,13 +1,20 @@
-j=input('Enter text :')
-spisok = j.split()
-c = input('Choose a or b:')
-if c=='a':
-  for i in spisok:
-    if len(i) < 3:
-      spisok.pop(spisok.index(i))
-  print(spisok)
-if c == 'b':
-    print(len(j))
-if c != 'b':
-    if c != 'a':
-        print("You can choose only a or b")
+a= int (input("Введіть перше число:"))
+b=int (input("Введіть друге число:"))
+c=int(input("Введіть дію:\n 1 Додавання\n 2 Віднімання\n 3 Множення\n 4 Ділення\n"))
+if c == 1:
+    g=a+b
+    print("Відповідь -  ",g)
+if c == 2:
+    g=a-b
+    print("Відповідь - ",g)
+if c ==3:
+    g=a*b
+    print("Відповідь - ",g)
+if c == 4:
+    try:
+        g=a/b
+    except ZeroDivisionError:
+        g="Ділити на 0 не можна"
+        print("Відповідь - ",g)
+
+
